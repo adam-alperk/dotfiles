@@ -1,0 +1,112 @@
+// ███╗   ███╗ ██████╗ ██████╗ ██╗   ██╗██╗     ███████╗███████╗
+// ████╗ ████║██╔═══██╗██╔══██╗██║   ██║██║     ██╔════╝██╔════╝
+// ██╔████╔██║██║   ██║██║  ██║██║   ██║██║     █████╗  ███████╗
+// ██║╚██╔╝██║██║   ██║██║  ██║██║   ██║██║     ██╔══╝  ╚════██║
+// ██║ ╚═╝ ██║╚██████╔╝██████╔╝╚██████╔╝███████╗███████╗███████║
+// ╚═╝     ╚═╝ ╚═════╝ ╚═════╝  ╚═════╝ ╚══════╝╚══════╝╚══════╝
+//
+// Waybar Modules by adigoj
+
+{
+  "hyprland/workspaces": {
+    "format": "{}",
+    "format-icons": {
+      "urgent": "",
+      "active": "",
+      "defualt": ""
+    },
+    "persistent-workspaces": {
+      "*": 9
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "rewrite": {
+      "Brave-browser": "Brave",
+      "kitty": "Kitty",
+      "firefox": "Firefox",
+      "lutris": "Lutris",
+      "vlc": "VLC",
+      "steam": "Steam",
+      "Gimp-2.10": "Gimp",
+      "notepad.exe": "Notepad",
+      "winecfg.exe": "Wine Conf",
+      "REAPER": "Reaper",
+      "org.kde.dolphin": "Dolphin",
+      "org.kde.discover": "Discover",
+      "org.rncbc.qpwgraph": "QPWGraph",
+      "org.qbittorrent.qbittorrent": "QBitTorrent",
+      "org.kde.plasma-systemmonitor": "SystemMon",
+      "org.kde.kate": "Kate",
+      "blender": "Blender",
+      "org.pwmt.zathura": "Zathura",
+      "parsecd": "Parsec"
+    },
+    "separate-outputs": true,
+    "max-length": 30
+  },
+
+  "clock#clock1": {
+    "timezone": "Asia/Calcutta",
+    "format": "    {:%H:%M}",
+    "tooltip": false
+  },
+
+  "clock#clock2": {
+    "timezone": "Asia/Calcutta",
+    "format": " 󰃮   {:%Y-%m-%d}",
+    "tooltip": false
+  },
+  "cpu": {
+    "interval": 10,
+    "format": "    {usage}%",
+    "max-length": 10,
+    "tooltip": false,
+    "on-click": "kitty -e bpytop"
+  },
+
+  "memory": {
+    "interval": 20,
+    "format": " 󰍛   {used} GB",
+    "max-length": 10,
+    "format-alt": " 󰍛   {percentage}%",
+    "tooltip": false
+  },
+
+  "pulseaudio": {
+    "scroll-step": 1, // %, can be a float
+    "format": " {icon}   {volume}% {format_source}",
+    "format-bluetooth": "{volume}% {icon} {format_source}",
+    "format-bluetooth-muted": " {icon} {format_source}",
+    "format-muted": " {format_source}",
+    "format-source": "    {volume}%",
+    "format-source-muted": "",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "",
+      "headset": "",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": ["", "", ""]
+    },
+    "on-click": "pavucontrol",
+    "tooltip": false
+  },
+
+  "idle_inhibitor": {
+    "format": "{icon}",
+    "tooltip": false,
+    "format-icons": {
+      "activated": "",
+      "deactivated": ""
+    }
+  },
+
+  "custom/powermenu": {
+    "format": "⏼",
+    "on-click": "~/.config/wofi/powermenu/launch.sh",
+    "tooltip": false
+  }
+}
