@@ -1,0 +1,169 @@
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul");
+
+:root {
+  --tab-selected-textcolor: #bec5e9 !important;
+  --tab-selected-bgcolor: #262836 !important;
+  --toolbar-bgcolor: #262836 !important;
+  --button-hover-bgcolor: #262836 !important;
+
+  @media (-moz-content-prefers-color-scheme: dark) {
+    & {
+      --tabpanel-background-color: #15171f !important;
+    }
+  }
+}
+
+window,
+#main-window,
+#toolbar-menubar,
+#TabsToolbar,
+#PersonalToolbar,
+#navigator-toolbox,
+#sidebar-box {
+  background-color: #1d1e29 !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
+window,
+#nav-bar {
+  background-color: #1d1e29 !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+
+.tab-background[selected="true"] {
+  background-color: #1d1e29 !important;
+  -moz-appearance: none !important;
+  background-image: none !important;
+}
+tabs:not([noshadowfortests]) .tab-background:is([selected], [multiselected]) {
+  box-shadow: none !important;
+}
+.titlebar-spacer[type="post-tabs"] {
+  width: 10px !important;
+}
+
+#alltabs-button {
+  list-style-image: url(chrome://global/skin/icons/arrow-down.svg);
+  background-color: #262836 !important;
+  transform: scale(0.6) !important;
+}
+
+.tabbrowser-tab[selected="true"] .tab-content {
+  background-color: #262836 !important;
+}
+
+.tabbrowser-tab[selected="false"] .tab-content {
+  background-color: transparent !important;
+}
+
+.tabbrowser-tab:not([selected="true"]):hover .tab-content {
+  background-color: #262836 !important;
+}
+
+.tabbrowser-tab:not([pinned]) {
+  color: #bec5e9 !important;
+}
+
+.tabbrowser-tab {
+  transition: all 0.4s ease-in-out !important;
+}
+
+#back-button:not([disabled="true"]) {
+  fill: #bec5e9 !important;
+}
+
+#back-button[disabled="true"] {
+  fill: #4b4e62 !important;
+}
+
+#forward-button:not([disabled="true"]) {
+  fill: #bec5e9 !important;
+}
+
+#forward-button[disabled="true"] {
+  fill: #4b4e62 !important;
+}
+
+.toolbarbutton-1 {
+  fill: #bec5e9 !important;
+}
+
+.toolbarbutton-1:hover {
+  .toolbarbutton-icon {
+    background-color: #262836 !important;
+  }
+  .toolbarbutton-badge-stack {
+    background-color: #262836 !important;
+  }
+}
+
+.urlbar-page-action,
+.urlbar-icon,
+.identity-box-button {
+  fill: #bec5e9 !important;
+}
+
+.urlbar-page-action:hover,
+.identity-box-button:hover {
+  background-color: #262836 !important;
+}
+
+#navigator-toolbox {
+  border-bottom: none !important;
+}
+
+#nav-bar {
+  box-shadow: none !important;
+  border-bottom: none !important;
+  visibility: collapse !important;
+}
+
+.tab-content:hover,
+#titlebar:hover,
+#nav-bar:hover {
+  visibility: visible !important;
+}
+
+#nav-bar:not([customizing]) {
+  visibility: visible !important;
+  margin-top: -40px !important;
+  transition-delay: 1s !important;
+  filter: alpha(opacity=0) !important;
+  opacity: 0 !important;
+  transition:
+    visibility,
+    ease 0.2s,
+    margin-top,
+    ease 0.2s,
+    opacity,
+    ease 0.2s,
+    rotate,
+    ease 0.2s !important;
+}
+
+#nav-bar:hover,
+#nav-bar:focus-within,
+#urlbar[focused="true"],
+#identity-box[open="true"],
+#titlebar:hover + #nav-bar:not([customizing]),
+#toolbar-menubar:not([inactive="true"]) ~ #nav-bar:not([customizing]) {
+  visibility: visible !important;
+
+  margin-top: 0px !important;
+  filter: alpha(opacity=100) !important;
+  opacity: 100 !important;
+  margin-bottom: -0.2px !important;
+}
+
+@media not (prefers-contrast) {
+  :root:not(:-moz-lwtheme) {
+    --toolbar-field-border-color: #15171f !important;
+    --toolbar-field-background-color: light-dark(
+      rgba(0, 0, 0, 0.05),
+      rgba(0, 0, 0, 0.3)
+    );
+    --toolbar-field-color: inherit;
+  }
+}

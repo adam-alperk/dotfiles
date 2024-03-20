@@ -1,0 +1,8 @@
+@-moz-document url("about:newtab"), url("about:home") {
+  body {
+    background-color: #1d1e29 !important; /* Use a color like #f0f0f0 or any color code */
+    /* For a background image, use the following line instead */
+    /* background-image: url('YOUR_IMAGE_URL') !important; */
+    background-size: cover !important;
+  }
+}
