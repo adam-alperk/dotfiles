@@ -16,7 +16,7 @@
     // "width": 35, // Waybar width, default: 1280
     "spacing": 6, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["idle_inhibitor", "hyprland/window"],
+    "modules-left": ["idle_inhibitor"],
     "modules-center": ["hyprland/workspaces"],
     "modules-right": ["pulseaudio", "cpu", "memory", "clock#clock2", "clock#clock1", "custom/powermenu"],
     "keyboard-state": {

@@ -142,6 +142,7 @@ alias cat="bat"
 alias clrs="~/Scripts/colours.sh"
 alias clrs2="~/Scripts/colours2.sh"
 alias steamkill="~/Scripts/steamkill.sh"
+alias exmnt="sudo mount -t exfat /dev/sda2 /run/media/Volume_1"
 
 # System Aliases
 
