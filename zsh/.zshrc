@@ -75,7 +75,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
-# Example format: plugins=(rails git textmate ruby lighthouse)
+# ezample format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
   git
@@ -108,7 +108,7 @@ source $ZSH/oh-my-zsh.sh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 #
-# Example aliases
+# ezample aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
@@ -121,10 +121,10 @@ alias kconf="nvim ~/.config/kitty/kitty.conf" # Kitty config
 # Mount ExFAT HDD
 alias hddmnt="sudo mount.exfat-fuse /dev/sda2 /media/Volume_1"
 
-alias e="exa"
-alias el="exa -l"
-alias ea="exa -la"
-alias et="exa -T"
+alias e="eza"
+alias el="eza -l"
+alias ea="eza -la"
+alias et="eza -T"
 alias home="cd ~"
 alias up="cd .."
 alias up2="cd ../.."
@@ -150,6 +150,7 @@ alias sus="systemctl suspend"
 alias off="systemctl poweroff"
 alias reboot="systemctl reboot"
 alias uefi="systemctl reboot --firmware-setup"
+alias bt="bluetoothctl"
 
 # Backlight aliases
 alias blnow="ddcutil getvcp 10"
