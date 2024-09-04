@@ -168,6 +168,7 @@ alias autoremove="sudo pacman -Qdtq | sudo pacman -Rcs -"
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 export EDITOR="nvim"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools/"
 
 eval "$(zoxide init zsh)"
 eval "$(thefuck --alias)"
