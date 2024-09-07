@@ -82,7 +82,14 @@ return {
 				client.server_capabilities.signatureHelpProvider = false
 				on_attach(client, bufnr)
 			end,
-			capabilities = capabilities,
+			capabilities = vim.tbl_extend("keep", capabilities, {
+				offsetEncoding = { "utf-16" },
+				includePath = {
+					"/home/adigoj/Code/Plugins/JUCE/modules",
+					"/home/adigoj/Code/Plugins/JUCE/extras",
+					"/home/adigoj/Code/Plugins/SimpleEQ/SimpleEQ/JuceLibraryCode/",
+				},
+			}),
 		})
 
 		-- configure typescript server with plugin
