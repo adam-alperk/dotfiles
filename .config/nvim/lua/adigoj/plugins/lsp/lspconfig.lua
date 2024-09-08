@@ -88,6 +88,7 @@ return {
 					"/home/adigoj/Code/Plugins/JUCE/modules",
 					"/home/adigoj/Code/Plugins/JUCE/extras",
 					"/home/adigoj/Code/Plugins/SimpleEQ/SimpleEQ/JuceLibraryCode/",
+					"/home/adigoj/Code/Plugins/SimpleEQ/JUCE Modules", -- Added path
 				},
 			}),
 		})
