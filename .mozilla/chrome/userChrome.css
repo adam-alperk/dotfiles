@@ -30,6 +30,7 @@ window,
   background-color: #1d1e29 !important;
   -moz-appearance: none !important;
   background-image: none !important;
+  visibility: hidden !important;
 }
 
 .tab-background[selected="true"] {
